@@ -912,7 +912,7 @@ void PointGreyCamera::connect()
         GigEConfig gigeconfig;
         error = cam.GetGigEConfig(&gigeconfig);
         PointGreyCamera::handleError("PointGreyCamera::GetGigEConfig could not get GigE setting", error);
-        gigeconfig.enablePacketResend = true;
+        gigeconfig.enablePacketResend = false;
         error = cam.SetGigEConfig(&gigeconfig);
         PointGreyCamera::handleError("PointGreyCamera::SetGigEConfig could not set GigE settings (packet resend)", error);
     }
